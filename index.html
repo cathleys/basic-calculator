@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="account.js"></script>
+    <style>
+      .blue {
+        background-color: rgb(142, 142, 250);
+        color: white;
+        border-radius: 5px;
+      }
+
+      .container {
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form name="form">
+        <input class="blue" type="text" name="displayScreen" placeholder="0" />
+
+        <div class="button">
+          <div class="row">
+            <input type="reset" name="C" value="C" onclick="calc(C.value)" />
+          </div>
+
+          <div class="row">
+            <input type="button" name="a7" value="7" onclick="calc(a7.value)" />
+            <input type="button" name="a8" value="8" onclick="calc(a8.value)" />
+            <input type="button" name="a9" value="9" onclick="calc(a9.value)" />
+            <input
+              type="button"
+              name="add"
+              value="+"
+              onclick="calc(add.value)"
+            />
+          </div>
+
+          <div class="row">
+            <input type="button" name="a4" value="4" onclick="calc(a4.value)" />
+            <input type="button" name="a5" value="5" onclick="calc(a5.value)" />
+            <input type="button" name="a6" value="6" onclick="calc(a6.value)" />
+            <input
+              type="button"
+              name="sub"
+              value="-"
+              onclick="calc(sub.value)"
+            />
+          </div>
+
+          <div class="row">
+            <input type="button" name="a1" value="1" onclick="calc(a1.value)" />
+            <input type="button" name="a2" value="2" onclick="calc(a2.value)" />
+            <input type="button" name="a3" value="3" onclick="calc(a3.value)" />
+            <input
+              type="button"
+              name="mult"
+              value="*"
+              onclick="calc(mult.value)"
+            />
+          </div>
+
+          <div class="row">
+            <input type="button" name="a0" value="0" onclick="calc(a0.value)" />
+            <input
+              type="button"
+              name="dot"
+              value="."
+              onclick="calc(dot.value)"
+            />
+            <input
+              type="button"
+              name="divide"
+              value="/"
+              onclick="calc(divide.value)"
+            />
+            <input
+              type="button"
+              name=""
+              value="="
+              onclick="displayScreen.value = eval(displayScreen.value)"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
